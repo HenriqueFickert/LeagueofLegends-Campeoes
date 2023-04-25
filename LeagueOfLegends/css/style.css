@@ -8,7 +8,10 @@ body {
 
 main {
     flex-grow: 1;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: radial-gradient(circle, transparent 20%, #f7f7f7 20%, #f7f7f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #f7f7f7 20%, #f7f7f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#d1d1d1 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #d1d1d1 2px, #f7f7f7 2px) -1px 0;
     background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
@@ -64,8 +67,10 @@ main {
 }
 
 a.menu__button__text {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 10px;
     text-decoration: none;
+    font-weight: 550;
     color: #000000;
     text-align: center;
     font-size: 11px;
@@ -97,10 +102,10 @@ a.menu__button__text {
 
 .container-roles {
     background: white;
-    height: 200px;
+    height: auto;
 }
 
-.container-roles__container-title {
+.container-title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,9 +127,198 @@ a.menu__button__text {
     padding: 0;
     margin: 0;
     font-family: inherit;
-    font-size: 60px;
+    font-size: 75px;
     font-weight: 600;
     font-style: inherit;
+}
+
+.container_title__subtitle {
+    max-width: 300px;
+    text-align: center;
+    font-style: normal;
+    color: #7E7E7E;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.container-menu-roles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-roles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.menu-roles__item {
+    margin: 10px;
+    padding: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 11px;
+    font-weight: 550px;
+    color: rgb(195, 195, 195);
+    cursor: pointer;
+}
+
+.menu-roles__item>a {
+    padding: 3px;
+}
+
+.menu-roles__item>a:hover {
+    color: #000000;
+    border-bottom: #d0a85c 1px solid;
+    padding: 3px;
+}
+
+.role-line {
+    margin: 10px;
+    height: 1px;
+    background-color: rgb(195, 195, 195);
+    width: 30px;
+}
+
+.role-detalhes-container {
+    margin: 50px;
+    display: flex;
+    width: 75%;
+    align-items: center;
+    justify-content: right;
+}
+
+.role-titulo {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+    margin-bottom: 5px;
+}
+
+.role-descricao {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.role-images-container {
+    position: relative;
+}
+
+.role-image {
+    position: relative;
+    height: auto;
+    width: 400px;
+    opacity: 0.15;
+}
+
+.personagem-role-image {
+    position: absolute;
+    max-height: auto;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.campeoes-container {
+    height: auto;
+    /* background-image: linear-gradient(white, #f2f2f2); */
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-filtro-container {
+    max-width: 1920px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-filtro {
+    width: 80%;
+    height: 40px;
+    position: relative;
+    border: #7E7E7E 1px solid;
+}
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-list {
+    --repetition: 5;
+    padding: 0;
+    height: auto;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(var(--repetition), 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    list-style-type: none;
+}
+
+.card {
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+    width: 215px;
+    height: auto;
+    max-height: 325px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 20px solid #f2f2f2;
+    border-left: 20px solid rgba(255, 0, 0, 0);
+    width: 0;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+}
+
+.card:hover>.card__rodape {
+    background: #4699ed;
+}
+
+.card__rodape {
+    width: 100%;
+    background: #000000;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.rodape__nome-campeao {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-size: 18px;
+    font-style: italic;
+    color: white;
 }
 
 /* footer */
