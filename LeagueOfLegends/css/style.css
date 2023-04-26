@@ -116,7 +116,7 @@ a.menu__button__text {
 }
 
 .container-title__title-p1 {
-    margin: 60px 0px 5px 0px;
+    margin: 50px 0px 5px 0px;
     font-family: inherit;
     font-size: 18px;
     font-style: inherit;
@@ -168,6 +168,22 @@ a.menu__button__text {
 
 .menu-roles__item>a {
     padding: 3px;
+}
+
+.menu-roles__item__selected {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 550px;
+    color: rgb(195, 195, 195);
+    cursor: pointer;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.menu-roles__item__selected>a {
+    padding: 3px;
+    color: #000000;
+    border-bottom: #d0a85c 2px solid;
 }
 
 .menu-roles__item>a:hover {
@@ -241,15 +257,16 @@ a.menu__button__text {
 
 .menu-filtro {
     height: 40px;
-    border: #7E7E7E 1px solid;
+    border: rgb(195, 195, 195) 1px solid;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .menu-filtro__buscar {
     margin-left: 10px;
-    border-right: #7E7E7E 1px solid;
+    border-right: rgb(195, 195, 195) 1px solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,29 +304,45 @@ a.menu__button__text {
     color: rgb(195, 195, 195);
     cursor: pointer;
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-}
-
-.menu-filtro__roles__item>a {
-    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .menu-filtro__roles__item:hover {
     color: #000000;
-    border-bottom: #d0a85c 3px solid;
+    border-bottom: #d0a85c 1px solid;
+}
+
+.menu-filtro__roles__item__selected {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 550px;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    border-bottom: #d0a85c 2px solid;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .menu-filtro__dificuldade {
-    margin-right: 10px;
-    border-left: #7E7E7E 1px solid;
+    border-left: rgb(195, 195, 195) 1px solid;
+    padding-right: 10px;
     padding-left: 10px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .menu-filtro__dificuldade>svg {
@@ -323,6 +356,15 @@ a.menu__button__text {
 .menu-filtro__dificuldade>p {
     font-size: 11px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-filtro__dificuldade__dropdown {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    margin-top: 40px;
+    border: 1px solid rgb(195, 195, 195);
+    top: 0;
 }
 
 .cards-container {
@@ -351,15 +393,38 @@ a.menu__button__text {
     position: relative;
     overflow: hidden;
     clip-path: polygon(0 0, 93% 0, 100% 5%, 100% 100%, 0 100%);
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card__image {
-    width: 100%;
+.card:hover {
+    transition: 0.3s;
+    clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.card>.card__image {
+    width: 115%;
+    transition: 0.5s;
+    height: auto;
+}
+
+.card:hover>.card__image {
+    width: 110%;
+    transition: 0.5s;
     height: auto;
 }
 
 .card:hover>.card__rodape {
     background: #4699ed;
+    transition: 0.5s;
+    border-top: 1px solid white;
+}
+
+.card:hover>.card__rodape>.rodape__nome-campeao {
+    padding-left: 25px;
+    transition: 0.5s;
 }
 
 .card__rodape {
@@ -371,6 +436,7 @@ a.menu__button__text {
     display: flex;
     align-items: center;
     justify-content: left;
+    transition: 0.5s;
 }
 
 .rodape__nome-campeao {
@@ -379,6 +445,7 @@ a.menu__button__text {
     font-size: 18px;
     font-style: italic;
     color: white;
+    transition: 0.5s;
 }
 
 /* footer */
