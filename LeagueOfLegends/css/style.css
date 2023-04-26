@@ -116,8 +116,7 @@ a.menu__button__text {
 }
 
 .container-title__title-p1 {
-    padding: 0;
-    margin: 50px 0px 5px 0px;
+    margin: 60px 0px 5px 0px;
     font-family: inherit;
     font-size: 18px;
     font-style: inherit;
@@ -143,6 +142,7 @@ a.menu__button__text {
 }
 
 .container-menu-roles {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,13 +157,13 @@ a.menu__button__text {
 }
 
 .menu-roles__item {
-    margin: 10px;
-    padding: 3px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
     font-weight: 550px;
     color: rgb(195, 195, 195);
     cursor: pointer;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 .menu-roles__item>a {
@@ -173,34 +173,35 @@ a.menu__button__text {
 .menu-roles__item>a:hover {
     color: #000000;
     border-bottom: #d0a85c 1px solid;
-    padding: 3px;
 }
 
 .role-line {
-    margin: 10px;
+    margin: 0px 10px 0px 10px;
     height: 1px;
     background-color: rgb(195, 195, 195);
     width: 30px;
 }
 
 .role-detalhes-container {
-    margin: 50px;
+    margin: 50px 0px 50px 0px;
     display: flex;
-    width: 75%;
+    width: 80%;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .role-titulo {
     font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: inherit;
     font-style: bold;
+    letter-spacing: 1px;
     margin-bottom: 5px;
 }
 
 .role-descricao {
     font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: inherit;
 }
 
 .role-images-container {
@@ -210,24 +211,21 @@ a.menu__button__text {
 .role-image {
     position: relative;
     height: auto;
-    width: 400px;
+    width: 500px;
     opacity: 0.15;
 }
 
 .personagem-role-image {
     position: absolute;
-    max-height: auto;
-    width: 300px;
+    height: auto;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    text-align: center;
 }
 
 .campeoes-container {
-    height: auto;
-    /* background-image: linear-gradient(white, #f2f2f2); */
     background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
@@ -236,36 +234,109 @@ a.menu__button__text {
 }
 
 .menu-filtro-container {
-    max-width: 1920px;
     margin-top: 25px;
     margin-bottom: 25px;
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 80%;
 }
 
 .menu-filtro {
-    width: 80%;
     height: 40px;
-    position: relative;
     border: #7E7E7E 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-filtro__buscar {
+    margin-left: 10px;
+    border-right: #7E7E7E 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-filtro__buscar>svg {
+    fill: #d0a85c;
+    width: 18px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.menu-filtro__buscar>p {
+    padding-right: 10px;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-filtro__roles {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+}
+
+.menu-filtro__roles__item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 550px;
+    color: rgb(195, 195, 195);
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-filtro__roles__item>a {
+    padding: 5px;
+}
+
+.menu-filtro__roles__item:hover {
+    color: #000000;
+    border-bottom: #d0a85c 3px solid;
+}
+
+.menu-filtro__dificuldade {
+    margin-right: 10px;
+    border-left: #7E7E7E 1px solid;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-filtro__dificuldade>svg {
+    fill: #d0a85c;
+    width: 12px;
+    height: 18px;
+    margin-left: 10px;
+    padding-bottom: 8px;
+}
+
+.menu-filtro__dificuldade>p {
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .cards-container {
+    background-color: #f2f2f2;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .cards-list {
-    --repetition: 5;
     padding: 0;
-    height: auto;
-    max-width: 80%;
+    max-width: 75%;
     display: grid;
-    grid-template-columns: repeat(var(--repetition), 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
     gap: 20px;
     justify-content: center;
     align-content: center;
@@ -273,23 +344,13 @@ a.menu__button__text {
 }
 
 .card {
-    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
     width: 215px;
     height: auto;
     max-height: 325px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-}
-
-.card:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-top: 20px solid #f2f2f2;
-    border-left: 20px solid rgba(255, 0, 0, 0);
-    width: 0;
+    clip-path: polygon(0 0, 93% 0, 100% 5%, 100% 100%, 0 100%);
 }
 
 .card__image {
@@ -304,7 +365,7 @@ a.menu__button__text {
 .card__rodape {
     width: 100%;
     background: #000000;
-    height: 50px;
+    height: auto;
     position: absolute;
     bottom: 0;
     display: flex;
@@ -313,9 +374,8 @@ a.menu__button__text {
 }
 
 .rodape__nome-campeao {
-    padding: 10px;
+    padding-left: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    /* font-family: 'Times New Roman', Times, serif; */
     font-size: 18px;
     font-style: italic;
     color: white;
