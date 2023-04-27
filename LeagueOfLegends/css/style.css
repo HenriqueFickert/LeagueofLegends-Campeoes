@@ -158,12 +158,12 @@ a.menu__button__text {
 
 .menu-roles__item {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 550px;
     color: rgb(195, 195, 195);
     cursor: pointer;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .menu-roles__item>a {
@@ -172,12 +172,12 @@ a.menu__button__text {
 
 .menu-roles__item__selected {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 550px;
     color: rgb(195, 195, 195);
     cursor: pointer;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .menu-roles__item__selected>a {
@@ -218,6 +218,7 @@ a.menu__button__text {
 .role-descricao {
     font-size: 13px;
     font-family: inherit;
+    letter-spacing: 1px;
 }
 
 .role-images-container {
@@ -226,9 +227,9 @@ a.menu__button__text {
 
 .role-image {
     position: relative;
-    height: auto;
-    width: 500px;
+    width: auto;
     opacity: 0.15;
+    min-height: 600px;
 }
 
 .personagem-role-image {
@@ -282,7 +283,7 @@ a.menu__button__text {
 
 .menu-filtro__buscar>p {
     padding-right: 10px;
-    font-size: 11px;
+    font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -299,7 +300,7 @@ a.menu__button__text {
 
 .menu-filtro__roles__item {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 550px;
     color: rgb(195, 195, 195);
     cursor: pointer;
@@ -319,7 +320,7 @@ a.menu__button__text {
 
 .menu-filtro__roles__item__selected {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 550px;
     cursor: pointer;
     height: 100%;
@@ -354,7 +355,7 @@ a.menu__button__text {
 }
 
 .menu-filtro__dificuldade>p {
-    font-size: 11px;
+    font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
