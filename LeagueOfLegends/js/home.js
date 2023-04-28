@@ -67,7 +67,6 @@ GetData(getAllUrl).then(data => {
     CreateCard(championsList, cardsContainer);
 });
 
-
 function CreateCard(result, container) {
     result.forEach(element => {
         var card = `<li class="card">

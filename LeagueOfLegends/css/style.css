@@ -158,12 +158,12 @@ a.menu__button__text {
 
 .menu-roles__item {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 550px;
     color: rgb(195, 195, 195);
     cursor: pointer;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .menu-roles__item>a {
@@ -172,7 +172,7 @@ a.menu__button__text {
 
 .menu-roles__item__selected {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 550px;
     color: rgb(195, 195, 195);
     cursor: pointer;
@@ -216,9 +216,8 @@ a.menu__button__text {
 }
 
 .role-descricao {
-    font-size: 13px;
+    font-size: 16px;
     font-family: inherit;
-    letter-spacing: 1px;
 }
 
 .role-images-container {
@@ -267,6 +266,7 @@ a.menu__button__text {
 
 .menu-filtro__buscar {
     margin-left: 10px;
+    height: 80%;
     border-right: rgb(195, 195, 195) 1px solid;
     display: flex;
     align-items: center;
@@ -283,7 +283,7 @@ a.menu__button__text {
 
 .menu-filtro__buscar>p {
     padding-right: 10px;
-    font-size: 13px;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -300,7 +300,7 @@ a.menu__button__text {
 
 .menu-filtro__roles__item {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 550px;
     color: rgb(195, 195, 195);
     cursor: pointer;
@@ -309,8 +309,8 @@ a.menu__button__text {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .menu-filtro__roles__item:hover {
@@ -320,7 +320,7 @@ a.menu__button__text {
 
 .menu-filtro__roles__item__selected {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 550px;
     cursor: pointer;
     height: 100%;
@@ -330,15 +330,15 @@ a.menu__button__text {
     justify-content: center;
     color: #000000;
     border-bottom: #d0a85c 2px solid;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .menu-filtro__dificuldade {
     border-left: rgb(195, 195, 195) 1px solid;
     padding-right: 10px;
     padding-left: 10px;
-    height: 100%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,7 +355,7 @@ a.menu__button__text {
 }
 
 .menu-filtro__dificuldade>p {
-    font-size: 13px;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -363,14 +363,17 @@ a.menu__button__text {
     position: absolute;
     width: 100%;
     height: 80px;
-    margin-top: 40px;
+    margin-top: 36px;
+    background-color: #f2f2f2;
     border: 1px solid rgb(195, 195, 195);
     top: 0;
+    z-index: 2;
 }
 
 .cards-container {
     background-color: #f2f2f2;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -447,6 +450,29 @@ a.menu__button__text {
     font-style: italic;
     color: white;
     transition: 0.5s;
+}
+
+.botao-mostrar-mais {
+    margin: 10px;
+    width: 150px;
+    height: 30px;
+    background-color: #222;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.botao-mostrar-mais:disabled {
+    display: none;
+}
+
+.botao-mostrar-mais:active {
+    background-color: #333;
+}
+
+.botao-mostrar-mais:hover {
+    background-color: #444;
 }
 
 /* footer */
