@@ -66,6 +66,7 @@ const cardsContainer = document.querySelector('.cards-list');
 const buttonMostrarMais = document.querySelector('.botao-mostrar-mais-container');
 const buttonsRoleFilterList = Array.from(document.querySelector('.menu-filtro__roles').querySelectorAll('li'));
 const searchInputFilter = document.querySelector('.buscar-input');
+const championWarning = document.querySelector('.aviso-campeao');
 
 ApplyRoleMenuButtonFunction();
 StartRoleMenuMovement();
@@ -80,8 +81,7 @@ GetData(getAllUrl).then(data => {
 SetButtonRoleFilter();
 
 searchInputFilter.addEventListener("keyup", function () {
-    cardsContainer.innerHTML = "";
-    indexCards = 0;
+    ResetDisplayedData();
     CreateCard(DisplayCards(), cardsContainer);
 })
 
@@ -98,6 +98,7 @@ function DisplayCards() {
     const pageCards = cardsToShow.slice(indexCards, indexCards + qntCards);
 
     indexCards += qntCards;
+
     if (indexCards > cardsToShow.length) {
         indexCards = cardsToShow.length;
         buttonMostrarMais.classList.add('display-none');
@@ -105,6 +106,11 @@ function DisplayCards() {
     else if (buttonMostrarMais.classList.contains('display-none')) {
         buttonMostrarMais.classList.remove('display-none');
     }
+
+    if (cardsToShow.length > 0)
+        championWarning.classList.add('display-none');
+    else
+        championWarning.classList.remove('display-none');
 
     return pageCards;
 }
@@ -126,15 +132,23 @@ function FilterByRole(data, role) {
     return data.filter(objeto => objeto.tags.includes(role));
 }
 
+function SearchFilter(data, text) {
+    return data.filter(objeto => objeto.name.toLowerCase().trim().includes(text.toLowerCase().trim()) || objeto.name.toLowerCase() == text);
+}
+
 function NextPage() {
     CreateCard(DisplayCards(), cardsContainer);
 }
 
 function ButtonRole(role) {
+    this.role = role;
+    ResetDisplayedData();
+    CreateCard(DisplayCards(), cardsContainer);
+}
+
+function ResetDisplayedData() {
     cardsContainer.innerHTML = "";
     indexCards = 0;
-    this.role = role;
-    CreateCard(DisplayCards(), cardsContainer);
 }
 
 function SetButtonRoleFilter() {
@@ -148,10 +162,6 @@ function SetButtonRoleFilter() {
             event.target.classList.replace('menu-filtro__roles__item', 'menu-filtro__roles__item__selected');
         });
     });
-}
-
-function SearchFilter(data, text) {
-    return data.filter(objeto => objeto.name.toLowerCase().trim().includes(text.toLowerCase().trim()) || objeto.name.toLowerCase() == text);
 }
 
 function StartRoleMenuMovement() {
