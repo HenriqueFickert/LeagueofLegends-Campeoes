@@ -275,10 +275,6 @@ a.menu__button__text {
     cursor: pointer;
 }
 
-.menu-filtro__buscar:hover>p {
-    color: #000000;
-}
-
 .menu-filtro__buscar>svg {
     fill: #d0a85c;
     width: 18px;
@@ -286,11 +282,15 @@ a.menu__button__text {
     margin-right: 10px;
 }
 
-.menu-filtro__buscar>p {
+.menu-filtro__buscar>input {
+    border: none;
+    background: none;
+    outline: none;
     padding-right: 10px;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(195, 195, 195);
+    width: 70px;
 }
 
 .menu-filtro__roles {

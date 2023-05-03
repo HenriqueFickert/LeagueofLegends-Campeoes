@@ -60,11 +60,12 @@ const roleInformations = {
 var role = "";
 var championsList;
 var cardsToShow;
-var indexCards = 1;
+var indexCards = 0;
 const qntCards = 16;
 const cardsContainer = document.querySelector('.cards-list');
 const buttonMostrarMais = document.querySelector('.botao-mostrar-mais-container');
 const buttonsRoleFilterList = Array.from(document.querySelector('.menu-filtro__roles').querySelectorAll('li'));
+const searchInputFilter = document.querySelector('.buscar-input');
 
 ApplyRoleMenuButtonFunction();
 StartRoleMenuMovement();
@@ -78,10 +79,20 @@ GetData(getAllUrl).then(data => {
 
 SetButtonRoleFilter();
 
+searchInputFilter.addEventListener("keyup", function () {
+    cardsContainer.innerHTML = "";
+    indexCards = 0;
+    CreateCard(DisplayCards(), cardsContainer);
+})
+
 function DisplayCards() {
     cardsToShow = championsList;
     if (role != "") {
         cardsToShow = FilterByRole(championsList, role);
+    }
+
+    if (searchInputFilter.value != null) {
+        cardsToShow = SearchFilter(cardsToShow, searchInputFilter.value);
     }
 
     const pageCards = cardsToShow.slice(indexCards, indexCards + qntCards);
@@ -121,7 +132,7 @@ function NextPage() {
 
 function ButtonRole(role) {
     cardsContainer.innerHTML = "";
-    indexCards = 1;
+    indexCards = 0;
     this.role = role;
     CreateCard(DisplayCards(), cardsContainer);
 }
@@ -137,6 +148,10 @@ function SetButtonRoleFilter() {
             event.target.classList.replace('menu-filtro__roles__item', 'menu-filtro__roles__item__selected');
         });
     });
+}
+
+function SearchFilter(data, text) {
+    return data.filter(objeto => objeto.name.toLowerCase().trim().includes(text.toLowerCase().trim()) || objeto.name.toLowerCase() == text);
 }
 
 function StartRoleMenuMovement() {
