@@ -254,6 +254,7 @@ a.menu__button__text {
     margin-top: 25px;
     margin-bottom: 25px;
     width: 80%;
+    min-width: 910px;
 }
 
 .menu-filtro {
