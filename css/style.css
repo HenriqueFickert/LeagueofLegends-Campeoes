@@ -167,7 +167,7 @@ a.menu__button__text {
     padding-right: 10px;
 }
 
-.menu-roles__item>a {
+.menu-roles__item>span {
     padding: 5px;
 }
 
@@ -181,13 +181,13 @@ a.menu__button__text {
     padding-right: 10px;
 }
 
-.menu-roles__item__selected>a {
+.menu-roles__item__selected>span {
     padding: 5px;
     color: #000000;
     border-bottom: #d0a85c 2px solid;
 }
 
-.menu-roles__item>a:hover {
+.menu-roles__item>span:hover {
     color: #000000;
     border-bottom: #d0a85c 1px solid;
 }
