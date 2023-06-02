@@ -219,6 +219,7 @@ a.menu__button__text {
 .role-descricao {
     font-size: 14px;
     font-family: inherit;
+    color: rgb(79, 79, 79);
 }
 
 .role-images-container {
