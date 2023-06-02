@@ -121,7 +121,7 @@ function CreateCard(result, container) {
         <img class="card__image" 
           src="${`${getImageUrl}${element.id}_0.jpg`}" alt="champion-splash-${element.name}" draggable="false"></img>
         <div class="card__rodape">
-          <h3 class="rodape__nome-campeao">${element.name}</h3>
+          <h1 class="rodape__nome-campeao">${element.name}</h1>
         </div>
       </li>`;
         container.insertAdjacentHTML('beforeend', card);
