@@ -68,6 +68,9 @@ const buttonsRoleFilterList = Array.from(document.querySelector('.menu-filtro__r
 const searchInputFilter = document.querySelector('.buscar-input');
 const championWarning = document.querySelector('.aviso-campeao');
 
+const footerCopyRight = document.querySelector('.footer-redes-sociais__text');
+
+getCurrentDate();
 ApplyRoleMenuButtonFunction();
 StartRoleMenuMovement();
 setInterval(StartRoleMenuMovement, timerInvertal);
@@ -206,3 +209,8 @@ function SetRoleDetails(value) {
     roleChampionImage.src = roleObject.imgcampeao;
     roleIconImage.src = roleObject.imgrole;
 }
+
+function getCurrentDate() {
+    var year = new Date().getFullYear();
+    footerCopyRight.innerHTML = `Copyright © 1997-${year} League of Legends. Todos os direitos reservados. Política de Privacidade e Termos de Uso.`
+} 
