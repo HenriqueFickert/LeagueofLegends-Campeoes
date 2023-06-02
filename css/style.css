@@ -47,6 +47,8 @@ main {
 }
 
 .container-logo__lol-logo {
+    height: 25px;
+    width: auto;
     margin: 15px;
 }
 
@@ -92,6 +94,11 @@ a.menu__button__text {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.container-banner__banner {
+    width: 100%;
+    height: auto;
 }
 
 .espaco-branco {
