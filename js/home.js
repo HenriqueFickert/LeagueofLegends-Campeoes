@@ -119,7 +119,7 @@ function CreateCard(result, container) {
     result.forEach(element => {
         var card = `<li class="card">
         <img class="card__image" 
-          src="${`${getImageUrl}${element.id}_0.jpg`}"  draggable="false"></img>
+          src="${`${getImageUrl}${element.id}_0.jpg`}" alt="champion-splash-${element.name}" draggable="false"></img>
         <div class="card__rodape">
           <h3 class="rodape__nome-campeao">${element.name}</h3>
         </div>
